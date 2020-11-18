@@ -1,0 +1,17 @@
+
+<h1>Profile Edit</h1>
+
+{% block body %}
+
+
+
+	<form method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+	{{ form.as_p}}
+	{{ pform.as_p}}
+	<img src="{{ pform.instance.picture.url }}" >
+
+	
+	<input type="SUBMIT" name="submit" value="Update"/>
+</form>
+{% endblock %}

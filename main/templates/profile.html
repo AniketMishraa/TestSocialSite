@@ -1,0 +1,20 @@
+
+<h1>Profile Home</h1>
+
+{% block body %}
+
+
+<p> Username: {{ user }}</p>
+<br></br>
+<p> Email: {{ user.email }}</p>
+<br></br>
+<p> Nickname: {{ user.profile.nickname }}</p>
+<br></br>
+{% if user.profile.profile_pic %}
+<p> Profile Picture: </p><img src = "{{ user.profile.profile_pic.url }}">
+{% else%}
+<p> Profile Picture: Nothing Set </p>
+{% endif %}
+<br></br>
+<a class="btn btn-primary" href="/profile/edit">Edit Your Profile</a>
+{% endblock %}
